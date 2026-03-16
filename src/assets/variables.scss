@@ -1,0 +1,9 @@
+@use 'sass:math';
+
+// Пример SCSS‑переменных — меняйте под себя
+// $primary-color: #42b883;
+// $secondary-color: #35495e;
+
+@function rem($px, $base: 16) {
+  @return math.div($px, $base) * 1rem;
+}
