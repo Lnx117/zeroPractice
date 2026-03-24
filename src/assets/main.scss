@@ -1,0 +1,76 @@
+@use './variables' as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  font-size: rem(16);
+  font-family: 'Jost', sans-serif;
+  background-color: #e9e9e9;
+}
+
+#app {
+  padding: 0;
+  height: 100vh;
+  max-width: rem(1440);
+  margin: 0 auto;
+  background-color: #FFFFFF;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  min-height: rem(114);
+  align-items: center;
+  padding: 0 rem(60);
+
+  &__menu {
+    display: flex;
+    gap: rem(20);
+  }
+
+  &__logo {
+    min-width: rem(137);
+    min-height: rem(74);
+  }
+
+  &__links {
+    max-width: rem(364);
+    padding: rem(21.95) rem(15) rem(28.05) rem(10);
+    display: flex;
+    gap: rem(25);
+
+    a {
+      text-decoration: none;
+      color: #000000;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: rem(20);
+
+    .navbar__buy-button {
+      background-color: #000000;
+      color: #FFFFFF;
+      padding: rem(12) rem(26) rem(18) rem(26) ;
+      font-size: rem(18);
+      font-weight: 400;
+      line-height: rem(20);
+    }
+  }
+
+}
