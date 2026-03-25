@@ -1,9 +1,63 @@
 @use 'sass:math';
+@use 'sass:map';
 
-// Пример SCSS‑переменных — меняйте под себя
-// $primary-color: #42b883;
-// $secondary-color: #35495e;
+// ——— Colors ———
+$color-bg-page: #e9e9e9;
+$color-bg-surface: #ffffff;
+$color-text: #000000;
+$color-text-inverse: #ffffff;
+$color-yellow: #E2B013;
+
+// ——— Breakpoints (min-width) ———
+$breakpoints: (
+  'sm': 576px,
+  'md': 768px,
+  'lg': 992px,
+  'xl': 1200px,
+);
+
+$font-weights: (
+  'regular': 400,
+  'medium': 500,
+  'bold': 700,
+);
+
+/// От указанного брейкпоинта и шире (mobile-first).
+/// Пример: @include media-up('md') { ... }
+@mixin media-up($name) {
+  $min: map.get($breakpoints, $name);
+  @if $min == null {
+    @error 'Unknown breakpoint: #{$name}. Допустимые ключи: #{map.keys($breakpoints)}';
+  }
+  @media (min-width: $min) {
+    @content;
+  }
+}
 
 @function rem($px, $base: 16) {
   @return math.div($px, $base) * 1rem;
+}
+
+// ——— Flex ———
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/// Строка: `align-items` по умолчанию `center`, `gap` опционален.
+@mixin flex-row($align: center, $gap: null) {
+  display: flex;
+  flex-direction: row;
+  align-items: $align;
+  @if $gap != null {
+    gap: $gap;
+  }
 }
