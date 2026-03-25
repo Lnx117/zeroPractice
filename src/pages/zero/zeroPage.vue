@@ -1,25 +1,48 @@
 <script setup lang="ts">
+import ZeroNavbar from './components/navbar/ZeroNavbar.vue'
+
 </script>
 
 <template>
-    <div class="navbar">
-        <div class="navbar__menu">
-            <div class="navbar__logo">
-                <img src="@/assets/images/logo.svg" alt="logo">
+    <div class="zero-page">
+        <section class="zero-page__navbar">
+            <ZeroNavbar />
+        </section>
+        <section class="zero-page__first">
+            <div class="zero-page__hero-content">
+                <div class="first">
+                    <div class="first__content">
+                        <div class="first__header-tag">
+                            Design addicted
+                        </div>
+                        <h1 class="first__title">
+                            A stylish UI Kit
+                        </h1>
+                        <h2 class="first__title-secondary">
+                            for all web creatives
+                        </h2>
+                        <p class="first__description">Zero is a Webflow Ecommerce and CMS UI kit including several carefully designed page layouts.</p>
+                        <div class="first__icons">
+                            <div class="first__icon">
+                                <img src="" alt="icon-1">
+                            </div>
+                            <div class="first__icon">
+                                <img src="" alt="icon-2">
+                            </div>
+                            <div class="first__icon">
+                                <img src="" alt="icon-2">
+                            </div>
+                            <div class="first__icon">
+                                <img src="" alt="icon-2">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="first__image">
+                        <img src="@/assets/images/first-banner.png" alt="first-image">
+                    </div>
+                </div>
             </div>
-            <div class="navbar__links">
-                <a href="#">Landing</a>
-                <a href="#">Company</a>
-                <a href="#">CMS Pages</a>
-                <a href="#">Utility</a>
-            </div>
-        </div>
-
-        <div class="navbar__actions">
-            <div class="navbar__buy-button">$129 Buy Now</div>
-            <div class="navbar__icon-button navbar__icon-button--search"><img class="navbar__icon" src="@/assets/images/search.png" alt="search"></div>
-            <div class="navbar__icon-button navbar__icon-button--cart"><img class="navbar__icon" src="@/assets/images/cart.png" alt="cart"></div>
-        </div>
+        </section>
     </div>
 </template>
 
