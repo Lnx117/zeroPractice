@@ -103,33 +103,53 @@ html {
   }
 
   &__title {
-    font-size: rem(96);
+    font-size: clamp(rem(42), 7vw, rem(96));
     font-weight: map.get($font-weights, 'regular');
     font-family: 'Jost', sans-serif;
-    line-height: rem(86.4);
+    line-height: 0.95;
     color: $color-text;
     margin-bottom: rem(40);
   }
 
   &__title-secondary {
-    font-size: rem(50);
+    font-size: clamp(rem(24),  4vw, rem(50));
     font-weight: map.get($font-weights, 'regular');
     font-family: 'Jost', sans-serif;
-    line-height: rem(25.2);
+    line-height: 1.1;
     color: $color-text;
     margin-bottom: rem(40);
   }
 
   &__description {
-    font-size: rem(26);
+    font-size: clamp(rem(16), 2vw, rem(26));
     font-weight: map.get($font-weights, 'regular');
     font-family: 'Jost', sans-serif;
-    line-height: rem(33.8);
+    line-height: 1.35;
     color: $color-text;
     margin-bottom: rem(86.5);
   }
 
   &__icons {
     @include flex-row(center, rem(66));
+
+    .icon {
+      display: flex;
+      flex-direction: column;
+      text-transform: uppercase;
+      font-family: 'Jost', sans-serif;
+      font-size: rem(10);
+      font-weight: map.get($font-weights, 'regular');
+      justify-content: center;
+      align-items: center;
+
+      img {
+        padding: rem(10) 0;
+        margin-bottom: rem(15);
+        width: rem(70);
+        height: rem(80);
+      }
+    }
   }
+
+
 }

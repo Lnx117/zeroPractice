@@ -23,17 +23,25 @@ import ZeroNavbar from './components/navbar/ZeroNavbar.vue'
                         </h2>
                         <p class="first__description">Zero is a Webflow Ecommerce and CMS UI kit including several carefully designed page layouts.</p>
                         <div class="first__icons">
-                            <div class="first__icon">
-                                <img src="" alt="icon-1">
+                            <div class="icon">
+                                <img src="@/assets/images/first_icon1.png" alt="icon-1">
+                                <span class="icon__text">smooth</span>
+                                <span class="icon__text">interactions</span>
                             </div>
-                            <div class="first__icon">
-                                <img src="" alt="icon-2">
+                            <div class="icon">
+                                <img src="@/assets/images/first_icon2.png" alt="icon-2">
+                                <span class="icon__text">many</span>
+                                <span class="icon__text">page layouts</span>
                             </div>
-                            <div class="first__icon">
-                                <img src="" alt="icon-2">
+                            <div class="icon">
+                                <img src="@/assets/images/first_icon3.png" alt="icon-2">
+                                <span class="icon__text">fully</span>
+                                <span class="icon__text">responsive</span>
                             </div>
-                            <div class="first__icon">
-                                <img src="" alt="icon-2">
+                            <div class="icon">
+                                <img src="@/assets/images/first_icon4.png" alt="icon-2">
+                                <span class="icon__text">fast</span>
+                                <span class="icon__text">customization</span>
                             </div>
                         </div>
                     </div>
